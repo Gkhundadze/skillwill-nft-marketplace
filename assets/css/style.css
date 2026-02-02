@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "work-sans";
+    src: url(../fonts/work-sans/WorkSans-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "space-mono";
+    src: url(../fonts/space-mono/space-mono-regular.ttf) format("truetype");
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,19 +18,25 @@ a {
     text-decoration: none;
     color: inherit;
 }
+img {
+    display: block;
+    /* width: 100%; */
+}
 
 :root {
     /* colors */
     --primary: #A259FF;
     --light: #FFFFFF;
     --semi-light: #858584;
-    --dark: #3B3B3B;
+    --dark: #2B2B2B;
     --semi-dark: #3B3B3B;
 
     /* fonts */
     --first-level-heading-size: 67px;
     --second-level-heading-size: 51px;
     --third-level-heading-size: 38px;
+    --fourth-level-heading-size: 28px;  
+    --fifth-level-heading-size: 22px;  
 }
 
 /* utility classes */
@@ -74,8 +88,16 @@ a {
 body {
     background-color: var(--dark);
 }
+h1 {
+    font-family: 'work-sans';
+}
 section {
     padding-block: 80px;
+    font-family: 'work-sans';
+    & h2 {
+    }
+    & p {
+    }
 }
 
 
@@ -88,6 +110,7 @@ header {
         }
     }
     & nav {
+        font-family: "work-sans";
         & ul {
             gap: 10px;
             & li {
@@ -97,6 +120,7 @@ header {
                         background-color: var(--primary);
                         padding: 20px 30px;
                         border-radius: 20px;
+                        gap: 12px;
                     }
                 }
                 & a {
@@ -122,18 +146,52 @@ section.welcome {
         }
         &  button {
             background-color: var(--primary);
-            
+            color: var(--light);
             padding: 20px 50px;
             border-radius: 20px;
             margin-bottom: 30px;
+            gap: 12px;
+            cursor: pointer;
         }
 
         & .statistic {
-
+            gap: 30px;
+            & .stat-number {
+                font-size: var(--fourth-level-heading-size);
+                font-family: 'space-mono';
+                font-weight: bold;
+            }
+            & .stat-text{
+                font-family: 'work-sans';
+                font-size: 24px;
+            }
         }
     }
 
     & .welcome-image {
+        & .most-popular-nft {
+            & img {
 
+            }
+            & .nft-info {
+                background-color: var(--semi-dark);
+                padding: 22px 20px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                & h3 {
+                    font-size: var(--fifth-level-heading-size);
+                    margin-bottom: 10px;
+                }
+                & .creator {
+                    gap: 12px;
+                    & img {
+                        width: 24px;
+                    }
+                    & strong {
+
+                    }
+                }
+            }
+        }
     }
 }
