@@ -135,70 +135,95 @@ header {
             }
         }
     }
+    & .burger-wrapper {
+        display: none;
+        transition-duration: .5s;
+        cursor: pointer;
+        &:hover {
+            transform: rotate(360deg);
+            & img {
+                transform: scale(1.2);
+            }
+        }
+        & img {
+            transition-duration: .5s;
+        }
+    }
 }
 
 section.welcome {
     color: var(--light);
-
-    & .welcome-content {
-        max-width: 510px;
-        & h1 {
-            font-size: var(--first-level-heading-size);
-            color: var(--light);
-            margin-bottom: 20px;
-        }
-        & p {
-            margin-bottom: 30px;
-        }
-        &  button {
-            background-color: var(--primary);
-            color: var(--light);
-            padding: 20px 50px;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            gap: 12px;
-            cursor: pointer;
-        }
-
-        & .statistic {
-            gap: 30px;
-            & .stat-number {
-                font-size: var(--fourth-level-heading-size);
-                font-family: 'space-mono';
-                font-weight: bold;
-            }
-            & .stat-text{
-                font-family: 'work-sans';
-                font-size: 24px;
-            }
-        }
-    }
-
-    & .welcome-image {
-        & .most-popular-nft {
-            & img {
-
-            }
-            & .nft-info {
-                background-color: var(--semi-dark);
-                padding: 22px 20px;
-                border-bottom-left-radius: 20px;
-                border-bottom-right-radius: 20px;
-                & h3 {
-                    font-size: var(--fifth-level-heading-size);
-                    margin-bottom: 10px;
+    
+        & .welcome-wrapper {
+            gap: 20px;
+            & .welcome-content {
+                max-width: 510px;
+    
+                & h1 {
+                    font-size: var(--first-level-heading-size);
+                    color: var(--light);
+                    margin-bottom: 20px;
                 }
-                & .creator {
+    
+                & p {
+                    margin-bottom: 30px;
+                }
+    
+                & button {
+                    background-color: var(--primary);
+                    color: var(--light);
+                    padding: 20px 50px;
+                    border-radius: 20px;
+                    margin-bottom: 30px;
                     gap: 12px;
-                    & img {
-                        width: 24px;
+                    cursor: pointer;
+                }
+    
+                & .statistic {
+                    gap: 30px;
+    
+                    & .stat-number {
+                        font-size: var(--fourth-level-heading-size);
+                        font-family: 'space-mono';
+                        font-weight: bold;
                     }
-                    & strong {
-
+    
+                    & .stat-text {
+                        font-family: 'work-sans';
+                        font-size: 24px;
                     }
                 }
             }
-        }
+    
+            & .welcome-image {
+                & .most-popular-nft {
+                    & img {
+                        width: 100%;
+                    }
+    
+                    & .nft-info {
+                        background-color: var(--semi-dark);
+                        padding: 22px 20px;
+                        border-bottom-left-radius: 20px;
+                        border-bottom-right-radius: 20px;
+    
+                        & h3 {
+                            font-size: var(--fifth-level-heading-size);
+                            margin-bottom: 10px;
+                        }
+    
+                        & .creator {
+                            gap: 12px;
+    
+                            & img {
+                                width: 24px;
+                            }
+    
+                            & strong {}
+                        }
+                    }
+                }
+            }
     }
 }
 
@@ -209,7 +234,7 @@ section.trending-colletions {
         }
     }
     & .collections-wrapper {
-
+        gap: 20px;
 
         & .collection-card {
             & .card-images {
@@ -399,6 +424,31 @@ section.browse-categories {
                 }
 
             }
+        }
+    }
+}
+
+
+
+@media (max-width: 1159px) {
+    .welcome-wrapper {
+        & .welcome-content, .welcome-image {
+            width: 40%;
+        }
+    }
+    .collections-wrapper {
+        justify-content: space-evenly;
+    }
+
+}
+@media (max-width: 960px) {
+
+    header {
+        & nav {
+            display: none;  
+        }
+        & .burger-wrapper {
+            display: block;
         }
     }
 }
