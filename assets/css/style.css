@@ -137,8 +137,8 @@ header {
     }
     & .burger-wrapper {
         display: none;
-        transition-duration: .5s;
         cursor: pointer;
+        transition-duration: .5s;
         &:hover {
             transform: rotate(360deg);
             & img {
@@ -163,10 +163,18 @@ section.welcome {
                     font-size: var(--first-level-heading-size);
                     color: var(--light);
                     margin-bottom: 20px;
+                    width: 90%;
+                    @media (max-width: 1160px) {
+                        font-size: var(--second-level-heading-size);
+                    }
+                    @media (max-width: 1080px) {
+                        font-size: var(--third-level-heading-size);
+                    }
                 }
     
                 & p {
                     margin-bottom: 30px;
+                    width: 90%;
                 }
     
                 & button {
@@ -432,7 +440,10 @@ section.browse-categories {
 
 @media (max-width: 1159px) {
     .welcome-wrapper {
-        & .welcome-content, .welcome-image {
+        /* & .welcome-content {
+            width: 48%;
+        } */
+        & .welcome-image {
             width: 40%;
         }
     }
@@ -441,14 +452,23 @@ section.browse-categories {
     }
 
 }
+
 @media (max-width: 960px) {
 
     header {
+        padding-block: 15px;
+        
         & nav {
             display: none;  
         }
         & .burger-wrapper {
             display: block;
-        }
+        }   
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding-inline: 30px;
     }
 }
