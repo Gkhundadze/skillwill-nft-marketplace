@@ -69,6 +69,9 @@ img {
 .justify-center {
     justify-content: center;
 }
+.justify-around {
+    justify-content: space-around;
+}
 .align-center {
     align-items: center;
 }
@@ -98,6 +101,18 @@ section {
     color: var(--light);
     & .section-header {
         margin-bottom: 60px;
+        & a {
+        gap: 12px;
+        padding: 20px 50px;
+        border-radius: 20px;
+        border: 2px solid var(--primary);
+        text-transform: capitalize;
+        & svg {
+            & path {
+                fill: var(--primary);
+            }
+        }
+    }
     }
     & h2 {
         font-size: var(--third-level-heading-size);
@@ -106,9 +121,10 @@ section {
 
         }
     }
-    & p {
+    
+
+    & p {}
     }
-}
 
 
 header {
@@ -335,7 +351,7 @@ section.top-creators {
         & h2 {
             margin-bottom: 10px;
         }
-        & a {
+        /* & a {
             gap: 12px;
             padding: 20px 50px;
             border-radius: 20px;
@@ -345,7 +361,7 @@ section.top-creators {
                     fill: var(--primary);
                 }
             }
-        }
+        } */
     }
     & .top-creators-wrapper {
         gap: 30px;
@@ -397,8 +413,6 @@ section.top-creators {
 
 section.browse-categories {
 
-
-
     & .categories-wrapper {
         gap: 30px;
         @media (max-width: 1182px) {
@@ -448,7 +462,6 @@ section.browse-categories {
                     background-image: url(../img/categories/category-photography-cover.png);
                 }
             }
-
             & a {
                 display: inline-block;
                 width: 240px;
@@ -509,21 +522,331 @@ section.browse-categories {
     }
 }
 
+section.discover-nfts {
 
+    & .section-header {
 
-@media (max-width: 1159px) {
-    .welcome-wrapper {
-        /* & .welcome-content {
-            width: 48%;
-        } */
-        & .welcome-image {
-            /* width: 330px; */
+    }
+    & .discover-nfts-wrapper {
+        gap: 50px 30px;
+        & .trending-nft-card {
+            border-radius: 20px;
+            background-color: var(--semi-dark);
+            & .card-header {
+
+            }
+            & .card-footer {
+                padding: 20px 30px 25px;
+                & h3 {
+                    font-size: var(--fifth-level-heading-size);
+                    margin-bottom: 5px;
+                }
+                & .author {
+                    gap: 12px;
+                    margin-bottom: 25px;
+                    & h4 {
+                        font-family: 'space-mono';
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+                }
+                & .label {
+                    color: var(--label-text);
+                    font-family: 'space-mono';
+                    font-size: 12px;
+                }
+                & .price, .highest-bid  {
+                    & .value {
+                        font-size: 1rem;
+                        font-family: 'space-mono';
+                        font-weight: 400;  
+                    }
+                }
+
+            }
         }
     }
+}
+
+
+section.live-auction {
+    height: 900px;
+    background-image: url(../img/nft-highlight-mushroom.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    & .layer {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(transparent, var(--primary));;
+        & .auction-data {
+            height: 100%;
+            align-items: flex-end;
+            padding-bottom: 50px;
+        & .item-data {
+            & .nft-author {
+                display: inline-flex;
+                padding: 10px 20px;
+                background-color: var(--semi-dark);
+                border-radius: 20px;
+                gap: 12px;
+                margin-bottom: 30px;
+            }
+            & h3 {
+                font-size: var(--second-level-heading-size);
+                margin-bottom: 30px;
+            }
+            & a {
+                display: inline-flex;
+                gap: 12px;
+                background-color: var(--light);
+                color: var(--dark);
+                padding: 20px 50px;
+                border-radius: 20px;
+            }
+        }
+        & .timer {
+            background-color: rgba(59, 59, 59, 0.5);
+            border-radius: 20px;
+            padding: 30px;
+            font-family: 'space-mono';
+            & .timer-title {
+                margin-bottom: 10px;
+            }
+            & .countdown-wrapper {
+                gap: 38px;
+                & .values-row {
+                    gap: 16px;
+                    margin-bottom: 5px;
+                }
+                & .labels-row  {
+                
+                }
+                & .value {
+                    font-size: var(--third-level-heading-size);
+                    font-weight: bold;
+                }
+                & .label {
+                    font-size: 12px;
+                    text-transform: capitalize;
+                }
+                & .value.minues {
+                    
+                }
+            }
+        }
+    }
+    }
+}
+
+section.how-it-works {
+    & .section-header {
+        & h2 {
+            margin-bottom: 10px;
+        }
+    }
+    & .cards-wrapper {
+        gap: 30px;
+        @media (max-width: 1182px) {
+            justify-content: center;
+            gap: 40px;
+        }
+        & .card {
+            background-color: var(--semi-dark);
+            padding: 30px;
+            max-width: 330px;
+            border-radius: 20px;
+            & img {
+                margin-bottom: 20px;
+            }
+            & h3 {
+                margin-bottom: 10px;
+                font-size: var(--fifth-level-heading-size);
+            }
+            & p {
+
+            }
+        }
+    }
+}
+/* temporary */
+form {
+    background-color: var(--light);
+    border-radius: 20px;
+    & label {
+        width: 55%;
+        border-radius: 20px;
+        & input {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: transparent;
+            border: 2px solid transparent;
+            outline: none;
+            &::placeholder {
+                color: var(--dark);
+            }
+            &:focus-visible {
+                border: 2px solid var(--primary);
+            }
+        }
+    }
+    & button {
+        border: none;
+        background-color: var(--primary);
+        color: var(--light);
+        padding: 20px 50px;
+        border-radius: 20px;
+        gap: 12px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+/* temporary */
+section.weekly-digest {
+    & .wrapper {
+        background-color: var(--semi-dark);
+        padding: 60px;
+        border-radius: 20px;
+        gap: 80px;
+        @media (max-width: 1125px) {
+                gap: 40px;
+                padding: 30px;
+            }  
+        & .cover-image-wrapper {
+            @media (max-width: 1125px) {
+                    min-width: 300px;
+                }
+            & img {
+                width: 100%;
+                /* @media (max-width: 1125px) {
+                    width: 300px;
+                }    */
+            }
+        }
+        & .join-us-wrapper {
+            max-width: 425px;
+            /* @media (max-width: 1125px) {
+                max-width: 300px;
+            } */
+            & h2 {
+                margin-bottom: 10px;
+            }
+            & p {
+                font-size: 22px;
+                margin-bottom: 40px;
+            }
+            & form {
+                background-color: var(--light);
+                border-radius: 20px;
+                & label {
+                    width: 55%;
+                    border-radius: 20px;
+                    & input {
+                        width: 100%;
+                        padding: 20px;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: transparent;
+                        border: 2px solid transparent;
+                        outline: none;
+                        &::placeholder {
+                            color: var(--dark);
+                        }
+                        &:focus-visible {
+                            border: 2px solid var(--primary);
+                        }
+                    }
+                }
+                & button {
+                    border: none;
+                    background-color: var(--primary);
+                    color: var(--light);
+                    padding: 20px 50px;
+                    border-radius: 20px;
+                    gap: 12px;
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding-block: 40px;
+    color: #ccc;
+    & .main-content-wrapper {
+        gap: 30px;
+        margin-bottom: 30px;
+        & .logo-socials-wrapper {
+            & .logo {
+                color: var(--light);
+                margin-bottom: 30px;
+                & a {
+                    gap: 12px;
+                }
+            }
+            & > p {
+                margin-bottom: 20px;
+            }
+            & .social-links-wrapper {
+                & > p {
+                    margin-bottom: 15px;    
+                }
+                & ul {
+                    gap: 10px;
+                }
+            }
+        }
+        & .explore-links-wrapper {
+            & h3 {
+                margin-bottom: 25px;
+                color: var(--light);
+            }
+            & ul {
+                margin-bottom: 20px;
+            }
+        }
+        & .join-our-weekly-digest-wrapper {
+            & h3 {
+                margin-bottom: 25px;
+                color: var(--light);
+            }
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    & .copy {
+        border-top: 1px solid var(--label-text);
+        padding-top: 20px;
+    }
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1159px) {
     .collections-wrapper {
         justify-content: space-evenly;
     }
-
+    
+}
+@media (max-width: 1050px) {
+    .collections-wrapper {
+        justify-content: space-around;
+    }
+    footer {
+        & .main-content-wrapper {
+            justify-content: center;
+        }
+    }
+    
 }
 
 @media (max-width: 960px) {
@@ -538,10 +861,166 @@ section.browse-categories {
             display: block;
         }   
     }
+    section.top-creators {
+        & .top-creators-wrapper {
+            & .creator-card {
+                flex-direction: row;
+                max-width: 330px;
+                width: 330px;
+                & > img {
+                    width: 60px;
+                }
+                & .rank-badge {
+                    top: 13px;
+                    left: 12px;
+                }
+            }
+        }
+    }
+    section.live-auction {
+        height: 630px;
+        background-image: url(../img/nft-highlight-mushroom-tablet.png);
+        background-position: top;
+        & .auction-data {
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 40px;
+            & .item-data {
+                align-self: flex-start;
+            }
+            & .timer {  
+                align-self: flex-end;
+            }
+        }
+    }
+    section.weekly-digest {
+        & .wrapper {
+            flex-direction: column;
+            max-width: 60%;
+            margin: 0 auto;
+            & .join-us-wrapper {
+                & form {
+                    flex-direction: column;
+                    background: none;
+                    gap: 1rem;
+                    & label {
+                        background-color: var(--light);
+                        width: 100%;
+                    }
+                    & button {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 850px) {
+    section.weekly-digest {
+        & .wrapper {
+            max-width: 70%;
+            & .join-us-wrapper {
+                & form {
+                   
+                    & label {
+                       
+                    }
+                    & button {
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 540px) {
+    section.discover-nfts {
+        & .section-header {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+    section.weekly-digest {
+        & .wrapper {
+            max-width: 90%;
+        }
+    }
+    footer {
+        & .main-content-wrapper {
+            justify-content: flex-start;
+        }
+    }
 }
 
 @media (max-width: 480px) {
     header {
         padding-inline: 30px;
     }
+    section.top-creators {
+        & .top-creators-wrapper {
+            & .creator-card {
+                max-width: 100%;
+                width: 100%;
+                
+                
+            }
+        }
+    }
+    section.discover-nfts {
+        
+        & .discover-nfts-wrapper {
+            & .trending-nft-card {
+                & .card-header {
+                    & img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    section.live-auction {
+        & .auction-data {
+            position: relative;
+            justify-content: center;
+            gap: 0;
+            & .item-data {
+                
+                & a {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+            & .timer {
+                width: 100%;
+                & .values-row {
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    section.how-it-works {
+        & .cards-wrapper {
+            & .card {
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    section.weekly-digest {
+        & .wrapper {
+            max-width: 90%;
+            padding: 16px;
+            & .cover-image-wrapper {
+                min-width: auto;
+            }
+        }
+    }
+    
 }
