@@ -1,0 +1,43 @@
+header {
+    padding: 20px 50px;
+    color: var(--light);
+    & .logo {
+        & a {
+            gap: 12px;
+        }
+    }
+    & nav {
+        font-family: "work-sans";
+        & ul {
+            gap: 10px;
+            & li {
+
+                &:last-child {
+                    & a {
+                        background-color: var(--primary);
+                        padding: 20px 30px;
+                        border-radius: 20px;
+                        gap: 12px;
+                    }
+                }
+                & a {
+                    padding: 12px 20px;
+                }
+            }
+        }
+    }
+    & .burger-wrapper {
+        display: none;
+        cursor: pointer;
+        transition-duration: .5s;
+        &:hover {
+            transform: rotate(360deg);
+            & img {
+                transform: scale(1.2);
+            }
+        }
+        & img {
+            transition-duration: .5s;
+        }
+    }
+}

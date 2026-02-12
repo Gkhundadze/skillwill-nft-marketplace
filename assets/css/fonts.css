@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "work-sans";
+    src: url(../fonts/work-sans/WorkSans-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "space-mono";
+    src: url(../fonts/space-mono/space-mono-regular.ttf) format("truetype");
+}

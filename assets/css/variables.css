@@ -1,0 +1,17 @@
+
+:root {
+    /* colors */
+    --primary: #A259FF;
+    --light: #FFFFFF;
+    --semi-light: #858584;
+    --dark: #2B2B2B;
+    --semi-dark: #3B3B3B;
+    --label-text: #858584;
+
+    /* fonts */
+    --first-level-heading-size: 67px;
+    --second-level-heading-size: 51px;
+    --third-level-heading-size: 38px;
+    --fourth-level-heading-size: 28px;  
+    --fifth-level-heading-size: 22px;  
+}

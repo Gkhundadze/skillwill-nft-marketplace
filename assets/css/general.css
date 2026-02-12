@@ -1,0 +1,66 @@
+body {
+    background-color: var(--dark);
+}
+h1 {
+    font-family: 'work-sans';
+}
+section {
+    padding-block: 80px;
+    font-family: 'work-sans';
+    color: var(--light);
+    & .section-header {
+        margin-bottom: 60px;
+        & a {
+        gap: 12px;
+        padding: 20px 50px;
+        border-radius: 20px;
+        border: 2px solid var(--primary);
+        text-transform: capitalize;
+        & svg {
+            & path {
+                fill: var(--primary);
+            }
+        }
+    }
+    }
+    & h2 {
+        font-size: var(--third-level-heading-size);
+        @media (max-width: 1060px) {
+            font-size: var(--fourth-level-heading-size);
+        }
+    }
+}
+
+form {
+    background-color: var(--light);
+    border-radius: 20px;
+    & label {
+        width: 55%;
+        border-radius: 20px;
+        & input {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: transparent;
+            border: 2px solid transparent;
+            outline: none;
+            &::placeholder {
+                color: var(--dark);
+            }
+            &:focus-visible {
+                border: 2px solid var(--primary);
+            }
+        }
+    }
+    & button {
+        border: none;
+        background-color: var(--primary);
+        color: var(--light);
+        padding: 20px 50px;
+        border-radius: 20px;
+        gap: 12px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}

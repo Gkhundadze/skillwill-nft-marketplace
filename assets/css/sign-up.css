@@ -1,0 +1,58 @@
+
+
+section.sign-up {
+    & .sign-up-inner-wrapper {
+        gap: 60px;
+        & .cover-wrapper {
+            & img {
+
+            }
+        }
+        & .form-wrapper {
+            & h1 {
+                font-size: var(--second-level-heading-size);
+                max-width: 480px;
+                margin-bottom: 20px;
+            }
+            & p {
+                max-width: 480px;
+                font-size: 22px;
+                margin-bottom: 40px;
+            }
+            & form {
+                background-color: unset;
+                width: 330px;
+                & label {
+                    width: 100%;
+                    display: block;
+                    background-color: var(--light);
+                    & svg {
+                        position: absolute;
+                        left: 20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:not(:last-of-type) {
+                        margin-bottom: 15px;
+                    }
+                    &:last-of-type {
+                        margin-bottom: 30px;
+                    }
+                    & input {
+                        display: block;
+                        border-radius: 20px;
+                        padding: 12px 20px 12px 50px;
+                        &::placeholder {
+                            color: var(--dark);
+                        }
+                    }
+                }
+                & button {
+                    padding-block: 12px;
+                    padding-inline: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

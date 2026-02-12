@@ -1,0 +1,215 @@
+@media (max-width: 1159px) {
+    .collections-wrapper {
+        justify-content: space-evenly;
+    }
+    
+}
+@media (max-width: 1050px) {
+    .collections-wrapper {
+        justify-content: space-around;
+    }
+    section.sign-up {
+        & .sign-up-inner-wrapper {
+            & .cover-wrapper {
+            & img {
+                width: 400px;
+            }
+            }
+            & .form-wrapper {
+                & h1 {
+                    font-size: var(--third-level-heading-size);
+                    max-width: 330px;
+                }
+                & p {
+                    font-size: 1rem;
+                    max-width: 330px;
+                }
+                & form {
+                    width: 325px;
+                }
+            }
+        }
+    }
+    footer {
+        & .main-content-wrapper {
+            justify-content: center;
+        }
+    }
+    
+}
+
+@media (max-width: 960px) {
+
+    header {
+        padding-block: 15px;
+        
+        & nav {
+            display: none;  
+        }
+        & .burger-wrapper {
+            display: block;
+        }   
+    }
+    section.top-creators {
+        & .top-creators-wrapper {
+            & .creator-card {
+                flex-direction: row;
+                max-width: 330px;
+                width: 330px;
+                & > img {
+                    width: 60px;
+                }
+                & .rank-badge {
+                    top: 13px;
+                    left: 12px;
+                }
+            }
+        }
+    }
+    section.live-auction {
+        height: 630px;
+        background-image: url(../img/nft-highlight-mushroom-tablet.png);
+        background-position: top;
+        & .auction-data {
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 40px;
+            & .item-data {
+                align-self: flex-start;
+            }
+            & .timer {  
+                align-self: flex-end;
+            }
+        }
+    }
+    section.weekly-digest {
+        & .wrapper {
+            flex-direction: column;
+            max-width: 60%;
+            margin: 0 auto;
+            & .join-us-wrapper {
+                & form {
+                    flex-direction: column;
+                    background: none;
+                    gap: 1rem;
+                    & label {
+                        background-color: var(--light);
+                        width: 100%;
+                    }
+                    & button {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 850px) {
+    section.weekly-digest {
+        & .wrapper {
+            max-width: 70%;
+            & .join-us-wrapper {
+                & form {
+                   
+                    & label {
+                       
+                    }
+                    & button {
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 540px) {
+    section.discover-nfts {
+        & .section-header {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+    section.weekly-digest {
+        & .wrapper {
+            max-width: 90%;
+        }
+    }
+    footer {
+        & .main-content-wrapper {
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding-inline: 30px;
+    }
+    section.top-creators {
+        & .top-creators-wrapper {
+            & .creator-card {
+                max-width: 100%;
+                width: 100%;
+                
+                
+            }
+        }
+    }
+    section.discover-nfts {
+        
+        & .discover-nfts-wrapper {
+            & .trending-nft-card {
+                & .card-header {
+                    & img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    section.live-auction {
+        & .auction-data {
+            position: relative;
+            justify-content: center;
+            gap: 0;
+            & .item-data {
+                
+                & a {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+            & .timer {
+                width: 100%;
+                & .values-row {
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    section.how-it-works {
+        & .cards-wrapper {
+            & .card {
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    section.weekly-digest {
+        & .wrapper {
+            max-width: 90%;
+            padding: 16px;
+            & .cover-image-wrapper {
+                min-width: auto;
+            }
+        }
+    }
+    
+}
