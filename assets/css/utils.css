@@ -4,7 +4,6 @@
     max-width: 1050px;
     margin: 0 auto;
 }
-
 .relative {
     position: relative;
 }
@@ -41,4 +40,13 @@
 }
 .flex-wrap {
     flex-wrap: wrap;
+}
+
+/* hover effect */
+
+.scale-down {
+    transition-duration: .3s;
+    &:hover {
+        transform: scale(0.95);
+    }
 }

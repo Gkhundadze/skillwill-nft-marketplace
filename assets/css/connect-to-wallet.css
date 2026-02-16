@@ -1,0 +1,40 @@
+
+
+section.connect-to-wallet {
+
+    & .connect-to-wallet-wrapper {
+        gap: 60px;
+        & .cover-wrapper {
+
+        }
+        & .content-wrapper {
+            & h1 {
+                font-size: var(--second-level-heading-size);
+                max-width: 480px;
+                margin-bottom: 20px;
+            }
+            & p {
+                max-width: 480px;
+                font-size: 22px;
+                margin-bottom: 40px;
+            }
+            & .providers-wrapper {
+                & li {
+                    &:not(:last-of-type) {
+                        & a {
+                            margin-bottom: 20px;
+                        }
+                    }
+                    & a {
+                        max-width: 320px;
+                        gap: 20px;
+                        padding: 16px 20px 16px 40px;
+                        background-color: var(--semi-dark);
+                        border-radius: 20px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
