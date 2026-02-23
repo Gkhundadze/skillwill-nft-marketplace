@@ -1,0 +1,61 @@
+
+
+th, td {
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+section.rankings {
+
+
+
+
+    table {
+        width: 100%;
+        
+        & thead {
+            & tr {
+                background-color: transparent;
+                & th {
+                    &:nth-child(2) {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        & tr {
+            background-color: var(--semi-dark);
+            border-radius: 20px;
+            & td {
+                padding-block: 12px;
+            }
+            & .ranking-order {
+                width: 70px;
+                padding: 12px 20px;
+                & span {
+                    width: 30px;
+                    height: 30px;
+                    background-color: var(--dark);
+                    border-radius: 20px;
+                }
+            }
+            & .artist-wrapper {
+                & img {
+
+                }
+                & h3 {
+
+                }
+            }
+            & .change {
+
+            }
+            & .nft-sold {
+
+            }
+            & .volume {
+
+            }
+        }
+    }
+}

@@ -33,7 +33,7 @@ section.welcome {
                     width: 90%;
                 }
     
-                & button {
+                & a {
                     background-color: var(--primary);
                     color: var(--light);
                     padding: 20px 50px;
@@ -86,14 +86,13 @@ section.welcome {
                         border-bottom-left-radius: 20px;
                         border-bottom-right-radius: 20px;
     
-                        & h3 {
+                        & strong {
                             font-size: var(--fifth-level-heading-size);
-                            margin-bottom: 10px;
                         }
     
                         & .creator {
                             gap: 12px;
-    
+                            margin-top: 10px;
                             & img {
                                 width: 24px;
                             }
